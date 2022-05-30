@@ -36,8 +36,8 @@ object ControlStructures extends App {
     try {
       throw new RuntimeException("throwing here")
     } catch {
-      case ex: RuntimeException => {println()}
-      case ex: IndexOutOfBoundsException => {println()}
+      case ex: RuntimeException => 1
+      case ex: IndexOutOfBoundsException => 1
     }
   }
 
