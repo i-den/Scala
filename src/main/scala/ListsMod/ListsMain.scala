@@ -23,4 +23,6 @@ object ListsMain extends App {
 
   val s = List("a", "b", "c", "c").toSet
   println(s)
+
+
 }

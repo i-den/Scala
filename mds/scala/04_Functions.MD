@@ -117,3 +117,26 @@ echo(words*) // * here
 // First Line
 // Second Line
 ```
+
+#### By name / By value
+```scala
+def calledByValue(x: Long): Unit = {
+  println("By Value - " + x)
+  println("By Value - " + x)
+}
+
+def calledByName(x: => Long): Unit = {
+  println("By Name - " + x)
+  println("By Name - " + x)
+}
+
+// evaluated when calling
+println(calledByValue(System.nanoTime()))
+// By Value - 2425550131100
+// By Value - 2425550131100
+
+// evaluated when used by the function (each time it is used in the function)
+println(calledByName(System.nanoTime()))
+//  By Name - 2425553418800
+//  By Name - 2425554221600
+```

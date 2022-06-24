@@ -23,3 +23,6 @@ And it can be used by the customer to track their dining-out budget.
 #### Techniques
 - copy-on-write
 - defensive copying
+
+Recursion instead of Loops
+Immutables

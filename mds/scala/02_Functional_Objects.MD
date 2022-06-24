@@ -1,11 +1,31 @@
 #### Ctor
 ```scala
+object RTJRecursiion extends App {
+
+  val p = new Person("", 5)
+  println(p.age)  // as is val can use
+  println(p.name) // cannot use as its just class param
+}
+
+class Person(name: String, val age: Int)
+```
+
+```scala
 class Rational(numerator: Int, denominator: Int) {
   println(s"Created $numerator / $denominator")
 }
 
 val rational = new Rational(1, 2)
 // prints Created 1 / 2
+```
+Infix notation / operator
+```scala
+class Person(name: String, val age: Int) {
+  def isNamed(n: String): Boolean = name == n
+}
+
+val p = new Person("Gosho", 15)
+println(p isNamed "Gosho")     // works with methods that have 1 param
 ```
 
 Can omit the 'new' keyword. Universal Apply Method
